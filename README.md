@@ -1,107 +1,122 @@
-# React
+📄 README.md — Sales Proposal Generator (AI + OCR Enabled)
+🚀 Sales Proposal Generator
 
-A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+Generate high-quality business proposals instantly from uploaded PDFs — including scanned PDFs via OCR (Tesseract.js).
+Built with React + Vite, featuring a clean corporate UI and offline-first extraction.
 
-## 🚀 Features
+📌 Features
+🔍 Document Upload & Extraction
 
-- **React 18** - React version with improved rendering and concurrent features
-- **Vite** - Lightning-fast build tool and development server
-- **Redux Toolkit** - State management with simplified Redux setup
-- **TailwindCSS** - Utility-first CSS framework with extensive customization
-- **React Router v6** - Declarative routing for React applications
-- **Data Visualization** - Integrated D3.js and Recharts for powerful data visualization
-- **Form Management** - React Hook Form for efficient form handling
-- **Animation** - Framer Motion for smooth UI animations
-- **Testing** - Jest and React Testing Library setup
+Upload any PDF (text-based or scanned)
+Local extraction using pdf.js
+Automatic OCR fallback for scanned/image-only PDFs using Tesseract.js
+No backend required — everything runs in the browser
 
-## 📋 Prerequisites
+🤖 AI-Style Smart Proposal Generation
 
-- Node.js (v14.x or higher)
-- npm or yarn
+Executive Summary
+Problem Understanding
+Recommendations (keyword-based)
+Pricing Tiers (3-tier model)
+Timeline & Milestones
+Terms & Conditions
+Next Steps / CTA
 
-## 🛠️ Installation
+🎨 Beautiful UI
 
-1. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-   
-2. Start the development server:
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
+Clean corporate theme
+Proposal Preview layout
+Color-coded timeline
+Editable sections
+Download/Print as HTML/PDF
+Save Draft (session-based)
 
-## 📁 Project Structure
+📁 Zero Server Upload
+Your documents never leave your browser.
 
-```
-react_app/
-├── public/             # Static assets
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Page components
-│   ├── styles/         # Global styles and Tailwind configuration
-│   ├── App.jsx         # Main application component
-│   ├── Routes.jsx      # Application routes
-│   └── index.jsx       # Application entry point
-├── .env                # Environment variables
-├── index.html          # HTML template
-├── package.json        # Project dependencies and scripts
-├── tailwind.config.js  # Tailwind CSS configuration
-└── vite.config.js      # Vite configuration
-```
+🛠️ Tech Stack
+Area	Technology
+Frontend Framework	React (Vite)
+UI Layer	TailwindCSS
+PDF Processing	pdf.js
+OCR Engine	Tesseract.js
+Proposal Engine	Custom heuristic generator
+Routing	React Router (SPA)
 
-## 🧩 Adding Routes
+⚙️ Installation
+1️⃣ Clone the repo
+git clone https://github.com/VIKHYATH-KS/Sales-Proposal.git
+cd Sales-Proposal
 
-To add new routes to the application, update the `Routes.jsx` file:
+2️⃣ Install dependencies
+npm install
 
-```jsx
-import { useRoutes } from "react-router-dom";
-import HomePage from "pages/HomePage";
-import AboutPage from "pages/AboutPage";
-
-const ProjectRoutes = () => {
-  let element = useRoutes([
-    { path: "/", element: <HomePage /> },
-    { path: "/about", element: <AboutPage /> },
-    // Add more routes as needed
-  ]);
-
-  return element;
-};
-```
-
-## 🎨 Styling
-
-This project uses Tailwind CSS for styling. The configuration includes:
-
-- Forms plugin for form styling
-- Typography plugin for text styling
-- Aspect ratio plugin for responsive elements
-- Container queries for component-specific responsive design
-- Fluid typography for responsive text
-- Animation utilities
-
-## 📱 Responsive Design
-
-The app is built with responsive design using Tailwind CSS breakpoints.
+3️⃣ Run the project
+npm start
 
 
-## 📦 Deployment
+Your app will start at:
+http://localhost:5173
 
-Build the application for production:
 
-```bash
-npm run build
-```
+(or whatever port Vite selects)
 
-## 🙏 Acknowledgments
+📤 Deploy
+🌐 Deployment Options
+The app is fully frontend-only — ideal for:
+Vercel (recommended)
+Netlify
+GitHub Pages
+Let me know if you want deployment instructions.
 
-- Built with [Rocket.new](https://rocket.new)
-- Powered by React and Vite
-- Styled with Tailwind CSS
+📷 Screenshots
 
-Built with ❤️ on Rocket.new
+You can add your own screenshots later.
+Example placeholders:
+
+Upload PDF Page	Generated Proposal Page
+
+	
+💡 How It Works
+🧠 Workflow
+User uploads PDF
+extractTextFromPDF() runs:
+pdf.js text extraction
+OCR fallback if needed
+Text store in sessionStorage
+Proposal Generation engine creates:
+Summary
+Problem definition
+Recommendations
+Pricing
+Timeline
+UI renders a corporate-style proposal
+
+📌 Project Structure
+src/
+  pages/
+    upload-document/
+    proposal-generation/
+    proposal-preview/
+  services/
+    pdfExtractor.js     → PDF + OCR logic
+    proposalGenerator.js → Smart local generator
+public/
+  pdf.worker.min.mjs     → pdf.js worker
+
+✨ Roadmap
+
+ API-based LLM enhancement for higher-quality proposals
+ Cloud OCR for heavy enterprise documents
+ User accounts + saved proposals
+ Project dashboard
+ Dark mode
+
+📝 License
+
+MIT License
+You are free to use, modify, and distribute.
+
+💬 Support
+If you want help deploying, improving UI, or adding AI-based proposal generation — just ask!
+vikhyath010@gmail.com
